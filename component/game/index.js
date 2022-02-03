@@ -37,7 +37,7 @@ export default function Game() {
         <>
           <Lives livesleft={lives} />
           <Word ActualWord={ActualWord} Playedletters={word_set} />
-          <Letters Playedletters={word_set} onLetterClick={guess} />
+          <Letters Playedletters={word_set} onSelect={guess} />
         </>
       )}
 
