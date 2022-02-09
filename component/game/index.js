@@ -10,18 +10,20 @@ export default function Game() {
   const [ActualWord, setActualWord] = useState("");
   const [Playedletters, setPlayedletters] = useState([]);
   const word_set = new Set([...ActualWord]);
+  const played_set = new Set([...Playedletters]);
   const wrong_letters = Playedletters.filter((letter) => {
     return !word_set.has(letter);
   });
   const lives = MAX_LIVES - wrong_letters.length;
-  const isRunning = ActualWord;
   const isWon =
-    isRunning &&
     lives > 0 &&
     [...word_set].reduce((acc, curr) => {
-      if (!word_set.has(curr)) return false;
+      if (!played_set.has(curr)) return false;
+
       return acc;
     }, true);
+  const isRunning = ActualWord && lives > 0 && !isWon;
+
   const guess = (alphabet) => {
     setPlayedletters((prev) => [...prev, alphabet]);
   };
@@ -36,8 +38,8 @@ export default function Game() {
       {isRunning && (
         <>
           <Lives livesleft={lives} />
-          <Word ActualWord={ActualWord} Playedletters={word_set} />
-          <Letters Playedletters={word_set} onSelect={guess} />
+          <Word ActualWord={ActualWord} Playedletters={played_set} />
+          <Letters Playedletters={played_set} onSelect={guess} />
         </>
       )}
 
