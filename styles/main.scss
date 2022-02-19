@@ -33,22 +33,6 @@
       width: 100px;
       border-radius: 50%;
       border: 10px solid black;
-      &::after {
-        content: "● ●";
-        font-size: 3rem;
-        color: black;
-        position: absolute;
-      }
-      &::before {
-        content: "(";
-        font-size: 3rem;
-        position: absolute;
-        font-family: sans-serif;
-        transform: rotate(90deg);
-        font-weight: bold;
-        top: 60px;
-        left: 50px;
-      }
     }
     &:not(:first-child) {
       height: 100px;
@@ -99,6 +83,26 @@
     @for $j from 1 through $i {
       .hangman__element:nth-child(#{$j}) {
         opacity: 1;
+      }
+    }
+    @if $i == 6 {
+      .hangman__element:nth-child(1) {
+        &::after {
+          content: "● ●";
+          font-size: 3rem;
+          color: black;
+          position: absolute;
+        }
+        &::before {
+          content: "(";
+          font-size: 3rem;
+          position: absolute;
+          font-family: sans-serif;
+          transform: rotate(90deg);
+          font-weight: bold;
+          top: 60px;
+          left: 50px;
+        }
       }
     }
   }

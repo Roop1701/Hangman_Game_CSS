@@ -22,7 +22,7 @@ export default function Game() {
 
       return acc;
     }, true);
-  const isRunning = ActualWord && lives > 0 && !isWon;
+  const isRunning = ActualWord && lives >= 0 && !isWon;
 
   const guess = (alphabet) => {
     setPlayedletters((prev) => [...prev, alphabet]);
