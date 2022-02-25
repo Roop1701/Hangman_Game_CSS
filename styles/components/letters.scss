@@ -1,0 +1,60 @@
+$speed: 0.8s;
+
+.letter-button {
+  opacity: 1;
+  outline: 0;
+  color: $liver-brown;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: "Open Sans";
+  text-transform: lowercase;
+  // padding: 0.5rem 0.5rem;
+  // margin-bottom: 0.5rem;
+  // margin-left: 0.5rem;
+  // margin-right: 0.5rem;
+
+  &:hover {
+    &:after {
+      opacity: 1;
+      transform: translateY(0) rotateX(0);
+    }
+
+    &:before {
+      opacity: 0;
+      transform: translateY(50%) rotateX(90deg);
+    }
+  }
+
+  &:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: $liver-brown;
+    display: block;
+    transition: $speed;
+    position: absolute;
+    background: $liver-brown;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: $liver-brown;
+    display: block;
+    padding: 0 30px;
+    line-height: 40px;
+    transition: $speed;
+    position: relative;
+    background: $liver-brown;
+    content: attr(data-front);
+    transform: translateY(0) rotateX(0);
+  }
+}

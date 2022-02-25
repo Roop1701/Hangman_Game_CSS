@@ -3,11 +3,12 @@ const ALL_LETTERS = [..."abcdefghijklmnopqrstuvwxyz"];
 
 export default function Letters({ Playedletters, onSelect }) {
   return (
-    <div>
+    <div className="display-flex justify-content-center">
       {ALL_LETTERS.map((alphabet) => (
         <button
           onClick={() => onSelect(alphabet)}
           disabled={Playedletters.has(alphabet)}
+          className="letter-button"
         >
           {alphabet}
         </button>
