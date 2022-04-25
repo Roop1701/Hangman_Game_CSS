@@ -4,18 +4,21 @@
   "description": "Hangman word game developed by Roop",
   "main": "index.js",
   "scripts": {
-    "build": "webpack"
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --config webpack.config.js --mode production"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/preset-react": "^7.16.7",
     "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "sass-loader": "^12.4.0",
-    "style-loader": "^3.3.1"
+    "style-loader": "^3.3.1",
+    "webpack-dev-server": "^4.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.17.2",

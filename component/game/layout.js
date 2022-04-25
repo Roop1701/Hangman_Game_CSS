@@ -29,11 +29,11 @@ export default function Layout({
         )}
 
         <Start onStart={start} isRunning={isRunning} />
-        {isWon && (
+        {/* {isWon && (
           <>
             <div>You won!</div>
           </>
-        )}
+        )} */}
       </div>
     </>
   );
