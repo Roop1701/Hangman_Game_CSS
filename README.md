@@ -5,6 +5,10 @@
 3. On the CLI please write npm run dev
 4. The Game should show up on http://localhost:8080/
 
+<br>
+A small showcase Video : https://youtu.be/O45jtsL54MY
+<br>
+
 This is only the frontend Repository of the Hangman Game :
 Link to the Back-End Repository https://github.com/Roop1701/Hangman_Backend.git
 <br>
