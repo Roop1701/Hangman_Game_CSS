@@ -7,7 +7,9 @@
 
 This is only the frontend Repository of the Hangman Game :
 Link to the Back-End Repository https://github.com/Roop1701/Hangman_Backend.git
+<br>
 A rough LLD which will help understanding the project: 
 https://user-images.githubusercontent.com/62179521/165025607-bc2dbd3d-6266-4309-9cbf-51f6af407b39.png
+<br>
 
 P.S : The project is development phase and there are much scope of improvement
